@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Web-Wizards</title>
+</head>
+
+<body class="bg-black">
+
+    <!-- Header -->
+    <header class="lg:sticky top-0 bg-black bg-opacity-100 border-b-2 border-purple-600 shadow-lg lg:font-[cursive] font-[mono] z-50">
+        <div class="header flex flex-wrap lg:flex-nowrap items-center justify-between px-6">
+
+            <!-- Logo Section -->
+            <div class="header-logo flex flex-wrap items-center lg:w-1/3 w-full justify-between lg:justify-start">
+                <div class="flex items-center">
+                    <img src="./assets/Web-Wizards-Logo.png" alt="Web Wizards Logo" class="w-[160px] h-[90px] transition-transform duration-1000 hover:scale-150">
+                </div>
+
+                <!-- Hamburger Menu Icon for Mobile -->
+                <button id="menu-btn" title="mnutogglebtn" class="block lg:hidden text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Section (hidden on small screens, toggled by the hamburger icon) -->
+            <nav id="menu" class="navbar lg:w-2/3 w-full hidden lg:flex justify-center lg:justify-end lg:mt-0">
+                <ul class="flex lg:gap-12 gap-6 text-white text-lg">
+                    <li><a href="#home" class="hover:text-purple-600 transition duration-300 border-b-2 border-transparent hover:border-purple-600">Home</a></li>
+                    <li><a href="#services" class="hover:text-purple-600 transition duration-300 border-b-2 border-transparent hover:border-purple-600">Services</a></li>
+                    <li><a href="#about" class="hover:text-purple-600 transition duration-300 border-b-2 border-transparent hover:border-purple-600">About Us</a></li>
+                    <li><a href="#portfolio" class="hover:text-purple-600 transition duration-300 border-b-2 border-transparent hover:border-purple-600">Portfolio</a></li>
+                    <li><a href="./contact.html" class="hover:text-purple-600 transition duration-300 border-b-2 border-transparent hover:border-purple-600">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu (Initially hidden, will appear when the hamburger icon is clicked) -->
+        <div id="mobile-menu-container" class="fixed inset-0 z-40 hidden">
+            <!-- Slide-in Mobile Menu -->
+            <nav id="mobile-menu" class="lg:hidden w-64 fixed right-0 top-0 h-full transform translate-x-full transition-transform duration-500">
+                <div class="flex justify-end p-4">
+                    <!-- Close Icon -->
+                    <button id="close-menu-btn" class="text-red-600 text-3xl focus:outline-none">
+                        &times;
+                    </button>
+                </div>
+                <ul class="flex flex-col items-start gap-[20px] text-white text-lg px-6 py-4">
+                    <li><a href="#home" class="hover:text-purple-600 transition duration-300 opacity-0 translate-x-4 mobile-menu-link">Home</a></li>
+                    <li><a href="#about" class="hover:text-purple-600 transition duration-300 opacity-0 translate-x-4 mobile-menu-link">About Us</a></li>
+                    <li><a href="#services" class="hover:text-purple-600 transition duration-300 opacity-0 translate-x-4 mobile-menu-link">Services</a></li>
+                    <li><a href="#portfolio" class="hover:text-purple-600 transition duration-300 opacity-0 translate-x-4 mobile-menu-link">Portfolio</a></li>
+                    <li><a href="./contact.html" class="hover:text-purple-600 transition duration-300 opacity-0 translate-x-4 mobile-menu-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="flex lg:flex-row flex-col justify-between items-center">
+            <div>
+                <h1 class="text-gray-400 -rotate-90 font-bold lg:flex hidden">Welcome to Web Wizards</h1>
+            </div>
+            <div>
+                <h1 class="text-gray-300 text-center font-[cursive] lg:text-[130px] text-[40px] font-semibold">We Are The <br><span class="lg:text-[130px] text-[42px] text-purple-600 font-bold italic">WEB WIZARDS</span></h1>
+            </div>
+            <div>
+                <h1 class="text-gray-400 -rotate-90 font-bold lg:flex hidden">Follow Us - &emsp13;<a href="https://www.instagram.com/" class="hover:text-purple-500">Instagram</a></h1>
+            </div>
+        </div>
+        <div class="flex justify-center flex-col items-center text-gray-400 text-xl font-semibold">
+            <p class="text-center lg:w-[55%] w-[80%] lg:py-0 py-[20px]">We are dedicated to delivering top-notch websites and ensuring the highest level of service, striving to exceed our clients' expectations with every project we undertake.</p>
+            <div class="scroll-indicator">
+                <div class="scroll-dot flex justify-center"></div>
+            </div> 
+        </div>          
+    </section>
+
+    <!-- Statistics Section with Enhanced Design and Animated Counters -->
+    <section id="stats" class="w-[80%] font-[cursive] my-[10vh] mx-auto rounded-[50px] border border-purple-600 hover:scale-110 transition-scale duration-500">
+        <div class="stats-container py-2 px-2 lg:px-8 ">
+            <div class="flex flex-col lg:flex-row lg:justify-between lg:space-x-8">
+
+                <!-- Total Projects Stat -->
+                <div class="flex flex-col items-center p-4 lg:p-2 opacity-60 lg:w-[25%] mb-6 lg:mb-0">
+                    <div class="text-purple-500 lg:text-[100px] md:text-[80px] text-[50px] font-bold counter"
+                        data-target="30">0</div>
+                    <div class="text-[#fff] font-800 text-2xl font-light mt-2">Total Projects</div>
+                </div>
+
+                <!-- Projects Completed Stats  -->
+                <div class="flex flex-col items-center p-4 lg:p-2 opacity-60 lg:w-[25%] mb-6 lg:mb-0">
+                    <div class="text-purple-500 lg:text-[100px] md:text-[80px] text-[50px] font-bold counter"
+                        data-target="20">0</div>
+                    <div class="text-[#fff] font-800 text-xl font-light mt-2">Completed Projects</div>
+                </div>
+
+                <!-- Happy Global Clients Stats -->
+                <div class="flex flex-col items-center p-2 lg:p-2 opacity-60 lg:w-[25%] mb-6 lg:mb-0">
+                    <div class="text-purple-500 lg:text-[100px] md:text-[80px] text-[50px] font-bold counter"
+                        data-target="25">0</div>
+                    <div class="text-[#fff] font-800 text-2xl font-light mt-2">Happy Global Clients</div>
+                </div>
+
+                <!-- Team Members Stat -->
+                <div class="flex flex-col items-center p-4 lg:p-2 opacity-60 lg:w-[25%] mb-6 lg:mb-0">
+                    <div class="text-purple-500 lg:text-[100px] md:text-[80px] text-[50px] font-bold counter"
+                        data-target="5">0</div>
+                    <div class="text-[#fff] font-800 text-2xl font-light mt-2">Team Members</div>
+                </div>                    
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h1 class="text-purple-500 text-[50px] text-center font-[cursive] font-bold italic">Services</h1>
+
+        <div class="flex lg:flex-row flex-col w-[90%] my-6 mx-auto">
+            <div class="lg:w-[30%] w-[100%] flex flex-col gap-8 my-auto lg:mr-[30px]">
+
+                <h2 class="text-purple-400 text-center text-2xl font-bold">What Services We Provide</h2>
+                <p class="text-center text-gray-400 text-lg">We offer a range of services to help businesses create, redesign, and maintain their websites. Our services are designed to meet the unique needs of each client, ensuring that their website is visually appealing, functional, and user-friendly.</p>
+
+                <button id="web-dev-svc-btn" title="svc-btn" data-content="content1" class="content-button bg-purple-600 hover:bg-purple-900 hover:text-gray-400 focus:bg-purple-900 focus:text-gray-400 rounded-lg lg:focus:scale-[1.2] transition-scale duration-1000 font-bold text-xl py-[15px] px-[15px] outline-none">Website Design & Development</button>
+
+                <button id="web-redesign-svc-btn" title="svc-btn" data-content="content2" class="content-button bg-purple-600 hover:bg-purple-900 hover:text-gray-400 focus:bg-purple-900 focus:text-gray-400 rounded-lg lg:focus:scale-[1.2] transition-scale duration-1000 font-bold text-xl py-[15px] px-[15px] outline-none">Website Redesign</button>
+
+                <button id="web-maintain-svc-btn" title="svc-btn" data-content="content3" class="content-button bg-purple-600 hover:bg-purple-900 hover:text-gray-400 focus:bg-purple-900 focus:text-gray-400 rounded-lg lg:focus:scale-[1.2] transition-scale duration-1000 font-bold text-xl py-[15px] px-[15px] outline-none">Website Maintenance & Support</button>
+            </div>
+
+            <div class="lg:w-[60%] w-[100%] lg:ml-[60px]">
+                <div id="content1" class="content mx-auto my-4 bg-purple-400 p-4 rounded-lg text-[17px] shadow-purple-600 shadow-lg hover:shadow-xl lg:hover:scale-[1.05] transition-scale duration-1000 active">
+                    <h1 class="text-center font-bold text-2xl font-[cursive] italic pb-4">Website Design & Development</h1>
+                    <p>This service involves building a complete website from scratch or enhancing an existing one. It focuses on creating a visually appealing, functional website that reflects the business's brand.</p>
+                    <h2 class="font-bold text-lg py-2">Key Points:</h2>
+                    <ul class="list-disc px-[30px]">
+                        <li><span class="font-bold">Responsive Design:</span> Ensures the website looks great on any device (desktop, tablet, smartphone).</li>
+                        <li><span class="font-bold">Custom Layouts:</span> Tailor the design to match the client’s brand and audience.</li>
+                        <li><span class="font-bold">User Experience (UX):</span> Make the website easy to navigate, improving overall usability.</li>
+                        <li><span class="font-bold">Modern Technologies:</span> Use HTML, CSS, TailwindCSS, and JavaScript for an optimal user experience.</li>
+                        <li><span class="font-bold">Performance Optimization:</span> Websites are built to load quickly and perform well across devices.</li>
+                    </ul>
+                    <h2 class="font-bold text-lg py-2">Why it matters for businesses:</h2>
+                    <ul class="list-disc px-[30px]">
+                        <li>A well-designed website attracts customers and builds credibility.</li>
+                        <li>A user-friendly experience keeps visitors engaged and encourages conversions (sales, sign-ups, etc.)</li>
+                        <li>Responsive design ensures the website is accessible to all users, regardless of the device they use.</li>
+                    </ul>
+                </div>
+
+                <div id="content2" class="content mx-auto my-4 bg-purple-400 p-4 rounded-lg text-[17px] shadow-purple-600 shadow-lg hover:shadow-xl lg:hover:scale-[1.05] transition-scale duration-1000 hidden">
+                    <h1 class="text-center font-bold text-2xl font-[cursive] italic pb-4">Website Redesign</h1>
+                    <p>This service involves updating or completely changing an existing website. It’s ideal for businesses whose current website may be outdated or not performing well.</p>
+                    <h2 class="font-bold text-lg py-2">Key Points:</h2>
+                    <ul class="list-disc px-[30px]">
+                        <li><span class="font-bold">Modernize the Design:</span> Update old designs to look fresh and professional.</li>
+                        <li><span class="font-bold">Improve User Experience:</span> Revamp navigation and layout for easier interaction.</li>
+                        <li><span class="font-bold">Mobile Optimization:</span> Ensure that the website works flawlessly on all screen sizes.</li>
+                        <li><span class="font-bold">Better Speed & Performance:</span> Optimize the code for faster loading times.</li>
+                    </ul>
+                    <h2 class="font-bold text-lg py-2">Why it matters for businesses:</h2>
+                    <ul class="list-disc px-[30px]">
+                        <li>An updated design can attract more visitors and improve engagement.</li>
+                        <li>Redesigning a website improves its functionality and keeps the business competitive.</li>
+                        <li>Mobile optimization ensures that the website is accessible to all users.</li>
+                    </ul>
+                </div>
+
+                <div id="content3" class="content mx-auto my-4 bg-purple-400 p-4 rounded-lg text-[17px] shadow-purple-600 shadow-lg hover:shadow-xl lg:hover:scale-[1.05] transition-scale duration-1000 hidden">
+                    <h1 class="text-center font-bold text-2xl font-[cursive] italic pb-4">Website Maintenance & Support</h1>
+                    <p>This service provides ongoing updates, bug fixes, and support for websites after they’ve been launched. It ensures that the website stays current, secure, and functional.</p>
+                    <h2 class="font-bold text-lg py-2">Key Points:</h2>
+                    <ul class="list-disc px-[30px]">
+                        <li><span class="font-bold">Regular Updates:</span> Keep the website’s software, plugins, and security patches up to date.</li>
+                        <li><span class="font-bold">Bug Fixes:</span> Identify and fix any issues, such as broken links, slow pages, or compatibility problems.</li>
+                        <li><span class="font-bold">Content Updates:</span> Make periodic content changes, such as adding blog posts, updating product listings, etc.</li>
+                        <li><span class="font-bold">Security Monitoring:</span> Protect the website from security threats by ensuring it’s protected against hacks, data breaches, and malware.</li>
+                    </ul>
+                    <h2 class="font-bold text-lg py-2">Why it matters for businesses:</h2>
+                    <ul class="list-disc px-[30px]">
+                        <li>Ongoing maintenance ensures that the website continues to run smoothly and securely.</li>
+                        <li>Regular updates keep the website fresh and relevant, which can improve search rankings and user engagement.</li>
+                        <li>Security monitoring protects the website and its visitors from potential threats.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1 class="text-purple-500 text-[40px] text-center font-[cursive] font-bold italic my-[4vh]">About Us</h1>
+        <div class="flex lg:flex-row flex-col-reverse justify-between items-center w-[90%] mx-auto">
+
+            <div class="lg:w-[40%] w-[100%]">
+                <div class="loader lg:flex hidden -mx-[160px] -my-[30px] animate-bounce"></div>
+
+                <div>
+                    <h2 class="text-gray-500 lg:text-[30px] text-[26px] font-semibold font-sans lg:mb-6 mb-4"><span class="text-purple-600 font-[cursive] font-bold italic">WEB WIZARDS</span> is one of the best Web Development Agencies with a World Wide Reach</h2>
+                    <div class="learn-about-btn relative group inline-block lg:mx-4 md:mx-[40%] mx-[25%]">
+                        <p class="text-lg text-gray-400 font-semibold hover:text-purple-500 transition-all duration-800 ease-in-out"><a href="./about.html">Learn More <i class="fa-solid fa-arrow-right-long mx-2"></i></a></p>
+                        <div class="absolute left-0 bottom-0 h-[2px] w-0 bg-purple-500 transition-all duration-500 ease-in-out group-hover:w-[80%]"></div>
+                    </div>
+                </div>
+                
+                <div class="loader lg:flex hidden w-[250px] h-[250px] mx-[200px] my-[60px] animate-bounce duration-800"></div>
+            </div>
+            
+            <!-- Video for About Us -->
+            <div class="relative mb-8 lg:mb-0 lg:skew-x-[-5deg]">
+                <img src="./assets/Web-Wizards-Logo-2.jpg" alt="Web Wizards About Video" class="w-full h-auto object-cover rounded-xl shadow-[0px_0px_10px_10px] shadow-purple-600">
+                <!-- Red Play Icon Overlay -->
+                <a target="_blank" href="./assets/Web-Wizards-About-Vid.mp4" class="absolute inset-0 flex items-center justify-center">
+                    <div class="button flex justify-center items-center h-[80px] w-[80px] rounded-full text-purple-700 bg-black border-2 border-purple-700">
+                        <i class="fas fa-play fa-2x"></i> <!-- FontAwesome play icon -->
+                    </div>
+                    <p class="hidden">Play video</p>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="portfolio" class="w-[90%] mx-auto mt-[5vh]">
+        <h1 class="text-purple-500 text-[40px] text-center font-[cursive] font-bold italic lg:my-[4vh] my-[2vh]">Our Portfolio</h1>
+        <h2 class="text-purple-400 lg:text-[50px] text-[40px] text-center font-bold">Projects to Explore</h2>
+
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[50px] p-4">
+            
+            <!-- Portfolio Item 1 (WEB WIZARDS) -->
+            <div class="card group relative lg:h-[320px] md:h-[350px] h-[400px] shadow-[0px_0px_10px_10px] shadow-purple-900 hover:scale-110 transition-scale duration-1000 rounded-[20px] overflow-hidden my-8">
+                <!-- Image -->
+                <img src="./assets/Web-Wizards-Logo-2.jpg" alt="Web Wizards Image" class="w-full h-full object-cover transition duration-1000 group-hover:opacity-0"/>
+        
+                <!-- Content -->
+                <div class="absolute inset-0 bg-gradient-to-bl from-purple-900 via-purple-700 to-purple-500 p-4 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-1000">
+                    <h1 class="text-purple-400 text-[30px] font-bold font-[cursive] italic my-2">WEB WIZARDS</h1>
+                    <ul class="text-black text-[18px] font-semibold text-center list-disc flex flex-col items-start gap-2 my-6">
+                        <li>Client: Web Wizards (Self)</li>
+                        <li>Category: Web Development</li>
+                        <li>Date: January 2025</li>
+                        <li>Status: Completed</li>
+                    </ul>
+                    <div class="flex space-x-2">
+                        <a href="https://uzz-ptl7.github.io/Web-Wizards/" class="px-4 py-2 bg-black text-purple-500 font-semibold rounded-[15px] hover:bg-purple-800 hover:text-black">View Website</a>
+                        <a href="https://github.com/uzz-ptl7/Web-Wizards" class="px-4 py-2 bg-black text-purple-500 font-semibold rounded-[15px] hover:bg-purple-900 hover:text-black">Source Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 2 (Silver Gym) -->
+            <div class="card group relative lg:h-[320px] md:h-[350px] h-[400px] shadow-[0px_0px_10px_10px] shadow-purple-900 hover:scale-110 transition-scale duration-1000 rounded-[20px] overflow-hidden my-8"> 
+                <!-- Image -->
+                <img src="./assets/Silver-Gym-Profile.jpg" alt="Silver Gym Image" class="w-full h-full object-cover transition duration-1000 group-hover:opacity-0"/>
+        
+                <!-- Content -->
+                <div class="absolute inset-0 bg-gradient-to-bl from-purple-900 via-purple-700 to-purple-500 p-4 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-1000">
+                    <h1 class="text-purple-400 text-[30px] font-bold font-[cursive] italic my-2">SILVER GYM</h1>
+                    <ul class="text-black text-[18px] font-semibold text-center list-disc flex flex-col items-start gap-2 my-6">
+                        <li>Client: Silver Gym</li>
+                        <li>Category: Web Development</li>
+                        <li>Date: March 2024</li>
+                        <li>Status: Completed</li>
+                    </ul>
+                    <div class="flex space-x-2">
+                        <a href="https://uzz-ptl7.github.io/Silver-Gym/" class="px-4 py-2 bg-black text-purple-500 font-semibold rounded-[15px] hover:bg-purple-800 hover:text-black">View Website</a>
+                        <a href="https://github.com/uzz-ptl7/Silver-Gym" class="px-4 py-2 bg-black text-purple-500 font-semibold rounded-[15px] hover:bg-purple-900 hover:text-black">Source Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 3 (Exquisite Konnor) -->
+            <div class="card group relative lg:h-[320px] md:h-[350px] h-[400px] shadow-[0px_0px_10px_10px] shadow-purple-900 hover:scale-110 transition-scale duration-1000 rounded-[20px] overflow-hidden my-8">
+                <!-- Image -->
+                <img src="./assets/ExquisiteKonnor-Profile.jpg" alt="Exquisite Konnor Image" class="w-full h-full object-cover transition duration-1000 group-hover:opacity-0"/>
+        
+                <!-- Content -->
+                <div class="absolute inset-0 bg-gradient-to-bl from-purple-900 via-purple-700 to-purple-500 p-4 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-1000">
+                    <h1 class="text-purple-400 text-[30px] font-bold font-[cursive] italic my-2">EXQUISITE KONNOR</h1>
+                    <ul class="text-black text-[18px] font-semibold text-center list-disc flex flex-col items-start gap-2 my-6">
+                        <li>Client: Exquisite Konnor</li>
+                        <li>Category: Web Development</li>
+                        <li>Date: Ongoing</li>
+                        <li>Status: In Progress</li>
+                    </ul>
+                    <div class="flex space-x-2">
+                        <a href="https://scottwo5.github.io/Exquisite-Konnor/" class="px-4 py-2 bg-black text-purple-500 font-semibold rounded-[15px] hover:bg-purple-800 hover:text-black">View Website</a>
+                        <a href="https://github.com/SCOTTWO5/Exquisite-Konnor" class="px-4 py-2 bg-black text-purple-500 font-semibold rounded-[15px] hover:bg-purple-900 hover:text-black">Source Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 4 (Car Rental) -->
+            <div class="card group relative lg:h-[320px] md:h-[350px] h-[400px] shadow-[0px_0px_10px_10px] shadow-purple-900 hover:scale-110 transition-scale duration-1000 rounded-[20px] overflow-hidden my-8">
+                <!-- Image -->
+                <img src="./assets/Car-Rental-Profile.jpg" alt="Car Rental Image" class="w-full h-full object-cover transition duration-1000 group-hover:opacity-0"/>
+        
+                <!-- Content -->
+                <div class="absolute inset-0 bg-gradient-to-bl from-purple-900 via-purple-700 to-purple-500 p-4 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-1000">
+                    <h1 class="text-purple-400 text-[30px] font-bold font-[cursive] italic my-2">LUXE DRIVE</h1>
+                    <ul class="text-black text-[18px] font-semibold text-center list-disc flex flex-col items-start gap-2 my-6">
+                        <li>Client: Luxe Drive</li>
+                        <li>Category: Web Development</li>
+                        <li>Date: June 2024</li>
+                        <li>Status: Completed</li>
+                    </ul>
+                    <div class="flex space-x-2">
+                        <a href="https://uzz-ptl7.github.io/Car-Rental/" class="px-4 py-2 bg-black text-purple-500 font-semibold rounded-[15px] hover:bg-purple-800 hover:text-black">View Website</a>
+                        <a href="https://github.com/uzz-ptl7/Car-Rental" class="px-4 py-2 bg-black text-purple-500 font-semibold rounded-[15px] hover:bg-purple-900 hover:text-black">Source Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 5 (EcoBazar) -->
+            <div class="card group relative lg:h-[320px] md:h-[350px] h-[400px] shadow-[0px_0px_10px_10px] shadow-purple-900 hover:scale-110 transition-scale duration-1000 rounded-[20px] overflow-hidden my-8">
+                <!-- Image -->
+                <img src="./assets/EcoBazar-Profile.jpg" alt="Exquisite Konnor Image" class="w-full h-full object-cover transition duration-1000 group-hover:opacity-0"/>
+        
+                <!-- Content -->
+                <div class="absolute inset-0 bg-gradient-to-bl from-purple-900 via-purple-700 to-purple-500 p-4 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-1000">
+                    <h1 class="text-purple-400 text-[30px] font-bold font-[cursive] italic my-2">ECO BAZAR</h1>
+                    <ul class="text-black text-[18px] font-semibold text-center list-disc flex flex-col items-start gap-2 my-6">
+                        <li>Client: Eco Bazar</li>
+                        <li>Category: Web Development</li>
+                        <li>Date: August 2024</li>
+                        <li>Status: Completed</li>
+                    </ul>
+                    <div class="flex space-x-2">
+                        <a href="https://uzz-ptl7.github.io/Eco-Bazaar/" class="px-4 py-2 bg-black text-purple-500 font-semibold rounded-[15px] hover:bg-purple-800 hover:text-black">View Website</a>
+                        <a href="https://github.com/uzz-ptl7/Eco-Bazaar" class="px-4 py-2 bg-black text-purple-500 font-semibold rounded-[15px] hover:bg-purple-900 hover:text-black">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Item 6 (To Do List Application) -->
+            <div class="card group relative lg:h-[320px] md:h-[350px] h-[350px] shadow-[0px_0px_10px_10px] shadow-purple-900 hover:scale-110 transition-scale duration-1000 rounded-[20px] overflow-hidden my-8">
+                <!-- Image -->
+                <img src="./assets/To-Do-List-Profile.jpg" alt="Exquisite Konnor Image" class="w-full h-full object-cover transition duration-1000 group-hover:opacity-0"/>
+        
+                <!-- Content -->
+                <div class="absolute inset-0 bg-gradient-to-bl from-purple-900 via-purple-700 to-purple-500 p-4 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-1000">
+                    <h1 class="text-purple-400 lg:text-[26px] md:text-[25px] text-[22px] font-bold font-[cursive] italic my-2">TO DO LIST APPLICATION</h1>
+                    <ul class="text-black text-[18px] font-semibold text-center list-disc flex flex-col items-start gap-2 my-6">
+                        <li>Client: TO DO Application</li>
+                        <li>Category: Web Development</li>
+                        <li>Date: September 2024</li>
+                        <li>Status: Completed</li>
+                    </ul>
+                    <div class="flex space-x-2">
+                        <a href="https://uzz-ptl7.github.io/BrwsrBased-To-Do-Application/" class="px-4 py-2 bg-black text-purple-500 font-semibold rounded-[15px] hover:bg-purple-800 hover:text-black">View Website</a>
+                        <a href="https://github.com/uzz-ptl7/BrwsrBased-To-Do-Application" class="px-4 py-2 bg-black text-purple-500 font-semibold rounded-[15px] hover:bg-purple-900 hover:text-black">Source Code</a>
+                    </div>
+                </div>
+            </div>            
+
+        </div>              
+    </section>
+
+    <!-- Call To Action -->
+    <section id="calltoaction" class="lg:w-[70%] w-[95%] my-[50px] mx-auto p-[50px] border border-purple-600 rounded-[50px] flex flex-col items-center justify-center">
+        <div>
+            <h1 class="text-gray-400 text-center font-bold lg:text-[40px] md:text-[30px] text-[20px]">Lets Discuss to Work and make<br> something Cool together</h1>
+        </div>
+        <div class="cta-contact-btn relative group inline-block mx-4 my-6 lg:my-4">
+            <p class="text-lg text-gray-400 font-semibold hover:text-purple-500 transition-all duration-800 ease-in-out"><a href="./contact.html">Contact <i class="fa-solid fa-arrow-right-long mx-2"></i></a></p>
+            <div class="absolute left-0 bottom-0 h-[2px] w-0 bg-purple-500 transition-all duration-500 ease-in-out group-hover:w-[80%]"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-[10vh] mx-auto border-t-2 border-purple-600">
+        <div class="flex lg:flex-row md:flex-row flex-col items-center justify-center lg:gap-6 gap-8 lg:px-8 lg:py-4">
+
+            <div class="lg:w-[30%] w-[80%] flex flex-col items-center justify-center gap-4">
+                <h1 class="text-purple-500 text-[20px] font-bold font-[cursive]">WEB WIZARDS</h1>
+                <img src="./assets/Web-Wizards-Logo.png" alt="Web Wizards Logo" class="lg:w-[240px] md:w-[350px] w-[240px] lg:h-[150px] md:h-[250px] h-[150px]">
+                <p class="text-gray-400">At <span class="text-purple-500">WEB WIZARDS</span>  We craft powerful, responsive websites for businesses and individuals worldwide. Your vision, our expertise—let's build something amazing together.</p>
+                <div class="social-icons flex items-center justify-center gap-8 mt-4 text-gray-400 text-[25px]">
+                    <a href="tel:+250794413721" class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-400 to-green-300 hover:scale-150 transition-scale duration-500"><i class="fa-solid fa-phone"></i><p class="hidden">Phone</p></a>
+                    <a href="https://wa.me/250794413721" class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-400 to-green-400 hover:scale-150 transition-scale duration-500"><i class="fa-brands fa-whatsapp"></i><p class="hidden">WhatsApp</p></a>
+                    <a href="https://www.instagram.com/" class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 via-red-500 via-orange-400 to-yellow-400 hover:scale-150 transition-scale duration-500"><i class="fa-brands fa-instagram"></i><p class="hidden">Instagram</p></a>
+                    <a href="mailto:globalwebwizards@gmail.com" class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400 hover:scale-150 transition-scale duration-500"><i class="fa-regular fa-envelope"></i><p class="hidden">Mail</p></a>
+                </div>
+            </div>
+
+            <div class="lg:w-[30%] w-[100%] flex flex-col items-center justify-center gap-4">
+                <h1 class="text-gray-500 text-[20px]">Our Sponsor: <span class="text-purple-500 text-[20px] font-bold font-[cursive]">DREAMIZE AFRICA</span></h1>
+                <img src="./assets/DreamizeAfrica-Logo.png" alt="Dreamize Logo" class="lg:w-[240px] md:w-[350px] w-[240px] lg:h-[150px] md:h-[250px] h-[150px]">
+                <p class="text-gray-400 w-[90%]"><span class="text-purple-500">Dreamize Africa</span>  Where we empower students to chase their tech dreams through personalized roadmaps, tailored guidance, and the tools needed to thrive in an ever-evolving tech landscape.</p>
+                <div class="social-icons flex items-center justify-center gap-8 mt-4 text-gray-400 text-[25px]">
+                    <a href="tel:+250785837748" class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-400 to-green-300 hover:scale-150 transition-scale duration-500"><i class="fa-solid fa-phone"></i><p class="hidden">Phone</p></a>
+                    <a href="https://wa.me/250785837748" class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-green-400 to-green-400 hover:scale-150 transition-scale duration-500"><i class="fa-brands fa-whatsapp"></i><p class="hidden">WhatsApp</p></a>
+                    <a href="https://www.instagram.com/dreamizeafrica/" class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 via-red-500 via-orange-400 to-yellow-400 hover:scale-150 transition-scale duration-500"><i class="fa-brands fa-instagram"></i><p class="hidden">Instagram</p></a>
+                    <a href="mailto:dreamizeafrica@gmail.com" class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400 hover:scale-150 transition-scale duration-500"><i class="fa-regular fa-envelope"></i><p class="hidden">Mail</p></a>
+                </div>
+            </div>
+
+            <div class="lg:w-[20%] flex flex-col items-center justify-center gap-4">
+                <h1 class="text-purple-500 text-[20px] font-bold font-[cursive]">QUICK LINKS:</h1>
+                <ul class="text-gray-400 text-[18px] mt-4 grid lg:grid-cols-1 grid-cols-2 lg:gap-2 gap-8">
+                    <li class="my-2"><a href="#home" class="hover:text-purple-500 transition duration-300">Home</a></li>
+                    <li class="my-2"><a href="#services" class="hover:text-purple-500 transition duration-300">Services</a></li>
+                    <li class="my-2"><a href="#about" class="hover:text-purple-500 transition duration-300">About</a></li>
+                    <li class="my-2"><a href="#portfolio" class="hover:text-purple-500 transition duration-300">Portfolio</a></li>
+                    <li class="my-2"><a href="./contact.html" class="hover:text-purple-500 transition duration-300">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="lg:w-[20%] flex flex-col items-center justify-center gap-4">
+                <h1 class="text-purple-500 text-[20px] font-bold font-[cursive]">CONTACTS:</h1>
+                <div class="text-gray-400 text-[18px] mt-4 flex flex-col gap-4">
+                    <p>Remote Agency | Kigali, Rwanda</p>
+                    <a href="tel:+250794413721" class="hover:text-purple-500 transition duration-300">+250 794 413 721</a>
+                    <a href="mailto:globalwebwizards@gmail.com" class="hover:text-purple-500 transition duration-300">globalwebwizards@gmail.com</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex items-center justify-center bg-purple-600">
+            <p class="text-black font-semibold text-center my-4">&copy; 2024 WEB WIZARDS | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
